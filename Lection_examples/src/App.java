@@ -17,11 +17,11 @@ public class App {
 
         //3. Работа с файлом
         badFileReader file = new badFileReader();
-        file.readBadFile();
+        //file.readBadFile();
 
         //4. Try with resourses
-        //badFileReaderWithResourses myfile = new badFileReaderWithResourses();
-        //myfile.readBadFile();
+        badFileReaderWithResourses myfile = new badFileReaderWithResourses();
+        myfile.readBadFile();
 
 
     }
