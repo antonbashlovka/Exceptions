@@ -1,7 +1,9 @@
 import Examples.divideByZero;
 import Examples.outOfBounds;
 import Examples.badFileReader;
+import Examples.badFileReaderOurException;
 import Examples.badFileReaderWithResourses;
+import Examples.badFileWriterWithResourses;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -21,7 +23,15 @@ public class App {
 
         //4. Try with resourses
         badFileReaderWithResourses myfile = new badFileReaderWithResourses();
-        myfile.readBadFile();
+       // myfile.readBadFile();
+
+        //5. Try with resorses 2
+        badFileWriterWithResourses filewrite = new badFileWriterWithResourses();
+        //filewrite.badFileWriter();
+
+        //6. Собственное исключение
+        badFileReaderOurException myread = new badFileReaderOurException();
+        myread.readBadFile();
 
 
     }
