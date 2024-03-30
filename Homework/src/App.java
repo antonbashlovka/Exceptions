@@ -41,11 +41,17 @@ public class App {
 
         String[] split = new String[6];
 
-        for (int i = 0; i < split.length; i++  ){
-            split[i] = scanner.next();
+        for (int i = 0; scanner.hasNext(); i++  ){
+            try {
+                split[i] = scanner.next();
+            }catch(RuntimeException e){
+                System.out.println("Превышено количество данных: " + e.getClass().getSimpleName() );
+                e.printStackTrace();
+            }
         }
+        
 
-        System.out.println(split.length);
+     
 
 
 
